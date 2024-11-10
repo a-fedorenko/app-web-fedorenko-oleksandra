@@ -1,0 +1,53 @@
+.header {
+  width: 100%;
+  background-color: #FFF;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--light-color);
+
+  &_wrapper {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+  }
+
+  &_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &_links{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    li {
+      margin: 0 20px;
+      cursor: pointer;
+    }
+
+    .link_active {
+      padding: 5px 15px;
+      color: var(--active);
+      border: 1px solid var(--active);
+      border-radius: 20px;
+    }
+  }
+
+  &_logout {
+    justify-self: right;
+  }
+}
+
+.courses_logo {
+  width: 80%;
+}
+
+.btn_arrow {
+  width: 20px;
+  height: 20px;
+  background-color: #FFF;
+}
