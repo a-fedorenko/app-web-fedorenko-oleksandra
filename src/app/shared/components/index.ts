@@ -4,3 +4,6 @@ export * from './info/info.component';
 export * from './modal/modal.component';
 export * from './search/search.component';
 export * from './category/category.component';
+export * from './comment/comment.component';
+export * from './label/label.component';
+export * from './post/post.component';

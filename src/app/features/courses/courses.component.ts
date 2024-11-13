@@ -5,6 +5,7 @@ import { Course } from '../../models/course-model';
 import { Author } from '../../services/authors.service';
 import { courses } from '../../../../courses';
 import { categories } from '../../../../categories';
+import { comments, posts } from '../../../../comments';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -20,6 +21,8 @@ export class CoursesComponent implements OnInit, OnDestroy {
   isAdmin$: Observable<boolean | null>;
   allCourses: Course[];
   categories: any[];
+  comments: any[];
+  posts: any[];
   allAuthors: Author[] = [];
   isConfirmModalOpen: boolean = false;
   isInfo: boolean;
@@ -36,6 +39,8 @@ export class CoursesComponent implements OnInit, OnDestroy {
     this.getUser();
     this.getCourses();
     this.categories = categories;
+    this.comments = comments;
+    this.posts = posts;
   }
 
   ngOnDestroy(): void {

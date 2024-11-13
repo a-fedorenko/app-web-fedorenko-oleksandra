@@ -6,7 +6,10 @@ import {
   InfoComponent,
   ModalComponent,
   SearchComponent,
-  CategoryComponent
+  CategoryComponent,
+  CommentComponent,
+  LabelComponent,
+  PostComponent
 } from './components/index';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DurationPipe } from './pipes/duration.pipe';
@@ -23,7 +26,10 @@ const COMPONENTS: any[] = [
   InfoComponent,
   ModalComponent,
   SearchComponent,
-  CategoryComponent
+  CategoryComponent,
+  CommentComponent,
+  LabelComponent,
+  PostComponent
 ];
 const PIPES: any[] = [
   DurationPipe,
