@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { faComments, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-post',
@@ -7,6 +8,9 @@ import { Component, Input } from '@angular/core';
 })
 export class PostComponent {
   @Input() post: any;
+
+  comment = faComments;
+  calendar = faCalendarDays;
 
   constructor() { }
 }

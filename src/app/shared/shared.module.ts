@@ -9,7 +9,8 @@ import {
   CategoryComponent,
   CommentComponent,
   LabelComponent,
-  PostComponent
+  PostComponent,
+  FooterComponent
 } from './components/index';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DurationPipe } from './pipes/duration.pipe';
@@ -29,7 +30,8 @@ const COMPONENTS: any[] = [
   CategoryComponent,
   CommentComponent,
   LabelComponent,
-  PostComponent
+  PostComponent,
+  FooterComponent
 ];
 const PIPES: any[] = [
   DurationPipe,

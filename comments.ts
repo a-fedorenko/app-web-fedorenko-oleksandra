@@ -25,7 +25,7 @@ export const posts = [
     {
         "text": "velit esse cillum dolore eu fugiat nullapariatur. Excepteur sint occaecat cupidatat",
         "url": "assets/images/posts/01.png",
-        "creationDate": "",
+        "creationDate": "01-08-2019",
         "comments": [
             "Kathy Sullivan",
             "CEO at ordian it",
@@ -38,7 +38,7 @@ export const posts = [
     {
         "text": "velit esse cillum dolore eu fugiat nullapariatur. Excepteur sint occaecat cupidatat",
         "url": "assets/images/posts/02.png",
-        "creationDate": "",
+        "creationDate": "01-08-2019",
         "comments": [
             "Kathy Sullivan",
             "CEO at ordian it",
@@ -51,7 +51,7 @@ export const posts = [
     {
         "text": "velit esse cillum dolore eu fugiat nullapariatur. Excepteur sint occaecat cupidatat",
         "url": "assets/images/posts/03.png",
-        "creationDate": "",
+        "creationDate": "01-08-2019",
         "comments": [
             "Kathy Sullivan",
             "CEO at ordian it",
