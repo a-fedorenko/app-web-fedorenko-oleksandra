@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Course } from '../../../../models/course-model';
+import { faFile, faClock } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-course-card',
@@ -8,6 +9,9 @@ import { Course } from '../../../../models/course-model';
 })
 export class CourseCardComponent implements OnInit {
   @Input() course: Course;
+
+  lesson = faFile;
+  clock = faClock;
 
   constructor() { }
 

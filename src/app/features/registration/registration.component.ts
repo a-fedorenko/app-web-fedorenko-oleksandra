@@ -1,7 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { AuthService } from '../../auth/services/auth.service';
 
 @Component({
   selector: 'app-registration',
@@ -13,9 +12,7 @@ export class RegistrationComponent implements OnInit, OnDestroy {
   registrationForm: FormGroup;
   sub: Subscription;
 
-  constructor(
-    private auth: AuthService,
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
     this.initForm();
@@ -36,8 +33,9 @@ export class RegistrationComponent implements OnInit, OnDestroy {
   }
 
   submit(): void {
+    window.localStorage.setItem('user', JSON.stringify(this.registrationForm.getRawValue()));
     this.registrationForm.disable();
-    this.auth.register(this.registrationForm.value)
+    this.initForm();
   }
 
 }

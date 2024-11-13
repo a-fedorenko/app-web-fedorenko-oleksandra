@@ -1,11 +1,21 @@
 <div class="container">
-  <div class="wrapper" *ngIf="selectedCourse$ | async as course">
+  <div class="header">
+    <img src="assets/images/course_background.png" alt="img">
+    <span class="header_title">Course Details</span>
+  </div>
+  <div class="wrapper" *ngIf="selectedCourse">
+    <div>
+      <img src="assets/images/course_img.png" alt="img">
+    </div>
+    <div>
+      <img [src]="selectedCourse.url" alt="img">
+    </div>
     <ul>
-      <li><strong>Title: </strong>{{ course.title }}</li>
-      <li><strong>Duration: </strong>{{ course.duration }}</li>
-      <li><strong>Created: </strong>{{ course.creationDate }}</li>
-      <li><strong>Authors: </strong>{{ course.authorsName }}</li>
-      <li><strong>Description: </strong>{{ course.description }}</li>
+      <li><strong>Title: </strong>{{ selectedCourse.title }}</li>
+      <li><strong>Duration: </strong>{{ selectedCourse.duration | duration }}</li>
+      <li><strong>Created: </strong>{{ selectedCourse.creationDate | creationDate }}</li>
+      <li><strong>Authors: </strong>{{ selectedCourse.authors[0] }}</li>
+      <li><strong>Description: </strong>{{ selectedCourse.description }}</li>
     </ul>
   </div>
 </div>

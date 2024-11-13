@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CourseComponent } from './features/course/course.component';
+import { CoursesComponent } from './features/courses/courses.component';
+import { RegistrationComponent } from './features/registration/registration.component';
 
 const routes: Routes = [
   {
@@ -9,8 +12,20 @@ const routes: Routes = [
   },
   {
     path: 'courses',
-    loadChildren: () => import('./features/courses/courses.module').then(m => m.CoursesModule),
+    component: CoursesComponent,
   },
+  {
+    path: 'courses/:id',
+    component: CourseComponent
+  },
+  {
+    path: 'about',
+    component: CourseComponent
+  },
+  {
+    path: 'registration',
+    component: RegistrationComponent
+  }
 ];
 
 @NgModule({

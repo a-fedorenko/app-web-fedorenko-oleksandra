@@ -11,6 +11,10 @@
     align-items: center;
     justify-content: space-between;
     width: 1200px;
+
+    a {
+      cursor: pointer;
+    }
   }
 
   &_content {
@@ -24,16 +28,33 @@
     align-items: center;
     justify-content: space-around;
 
-    li {
+    .links_item {
       margin: 0 20px;
       cursor: pointer;
+
+      a {
+        display: block;
+        text-align: center;
+        width: 80px;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: var(--dark-color);
+
+        &:hover {
+          color: var(--active);
+          background-color: #E9E2FF;
+          border-radius: 20px;
+        }
+      }
     }
 
-    .link_active {
-      padding: 5px 15px;
-      color: var(--active);
+    .active {
       border: 1px solid var(--active);
       border-radius: 20px;
+
+      a {
+        color: var(--active);
+      }
     }
   }
 

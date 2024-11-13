@@ -3,12 +3,10 @@ import { CommonModule } from '@angular/common';
 import { CoursesComponent } from './courses.component';
 import { CourseCardComponent } from './components/course-card/course-card.component';
 import { CourseListComponent } from './components/course-list/course-list.component';
-import { CourseFormModule } from '../course-form/course-form.module';
-import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { CoursesRoutingModule } from './courses-routing.module';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../../shared/shared.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -20,11 +18,9 @@ import { SharedModule } from '../../shared/shared.module';
   imports: [
     CommonModule,
     SharedModule,
-    CourseFormModule,
-    HttpClientModule,
-    CoursesRoutingModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   exports: [
     CoursesComponent

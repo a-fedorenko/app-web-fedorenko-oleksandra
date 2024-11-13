@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { AuthStateFacade } from 'src/app/auth/store/auth.facade';
+
 
 @Component({
   selector: 'app-login',
@@ -14,15 +14,12 @@ export class LoginComponent implements OnInit {
     password: ''
   };
 
-  constructor(
-    private authFacade: AuthStateFacade
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
   submit(form: NgForm) {
-    this.authFacade.login(form.value);
+    
   }
-
 }

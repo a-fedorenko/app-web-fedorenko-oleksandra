@@ -4,10 +4,6 @@
   >
     <div class="btn_block">
       <app-button [btnClass]="'btn_show'" [buttonText]="showButtonText" (click)="showCourse(course)"></app-button>
-      <ng-container *ngIf="isEdit">
-        <app-button [iconName]="iconEdit" (click)="editCourse(course)"></app-button>
-        <app-button [iconName]="iconDelete" (click)="deleteCourse(course)"></app-button>
-      </ng-container>
     </div>
   </app-course-card>
 </div>

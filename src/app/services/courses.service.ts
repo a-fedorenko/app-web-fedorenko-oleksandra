@@ -1,86 +1,65 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Course } from '../models/course-model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CoursesService {
+  selectedCourse$ = new BehaviorSubject<Course | null>(null);
 
-  configUrl = 'http://localhost:3000';
+  constructor() { }
 
-  constructor(
-    private http: HttpClient
-  ) { }
+  // getAll(): Observable<{
+  //   successful: boolean,
+  //   result: Course[]
+  // }> {
+  //   return this.http.get<{
+  //     successful: boolean,
+  //     result: Course[]
+  //   }>(`${this.configUrl}/courses/all`);
+  // }
 
-  getAll(): Observable<{
-    successful: boolean,
-    result: Course[]
-  }> {
-    return this.http.get<{
-      successful: boolean,
-      result: Course[]
-    }>(`${this.configUrl}/courses/all`);
+  // filterCourses(searchValue: string): Observable<{
+  //   successful: boolean,
+  //   result: Course[]
+  // }> {
+  //   return this.http.get<{
+  //     successful: boolean,
+  //     result: Course[]
+  //   }>(`${this.configUrl}/courses/filter?title=${searchValue}`);
+  // }
+
+  // addCourse(course: Course): Observable<{
+  //   successful: boolean,
+  //   result: Course
+  // }> {
+  //   return this.http.post<{
+  //     successful: boolean,
+  //     result: Course
+  //   }>(`${this.configUrl}/courses/add`, {
+  //     title: course.title,
+  //     description: course.description,
+  //     duration: course.duration,
+  //     authors: course.authors,
+  //   });
+  // }
+
+  getCourse(): Observable<Course | null> {
+    return this.selectedCourse$.asObservable();
   }
 
-  filterCourses(searchValue: string): Observable<{
-    successful: boolean,
-    result: Course[]
-  }> {
-    return this.http.get<{
-      successful: boolean,
-      result: Course[]
-    }>(`${this.configUrl}/courses/filter?title=${searchValue}`);
+  selectCourse(course: Course): void {
+    this.selectedCourse$.next(course);
   }
 
-  addCourse(course: Course): Observable<{
-    successful: boolean,
-    result: Course
-  }> {
-    return this.http.post<{
-      successful: boolean,
-      result: Course
-    }>(`${this.configUrl}/courses/add`, {
-      title: course.title,
-      description: course.description,
-      duration: course.duration,
-      authors: course.authors,
-    });
-  }
-
-  getCourse(id: string): Observable<{
-    successful: boolean,
-    result: Course
-  }> {
-    return this.http.get<{
-      successful: boolean,
-      result: Course
-    }>(`${this.configUrl}/courses/${id}`);
-  }
-
-  editCourse(course: Course, id: string): Observable<{
-    successful: boolean,
-    result: Course
-  }> {
-    return this.http.put<{
-      successful: boolean,
-      result: Course
-    }>(`${this.configUrl}/courses/${id}`, {
-      title: course.title,
-      description: course.description,
-      duration: course.duration,
-      authors: course.authors,
-    });
-  }
-
-  deleteCourse(id: string): Observable<{
-    successful: boolean,
-    result: string
-  }> {
-    return this.http.delete<{
-      successful: boolean,
-      result: string
-    }>(`${this.configUrl}/courses/${id}`);
-  }
+  // deleteCourse(id: string): Observable<{
+  //   successful: boolean,
+  //   result: string
+  // }> {
+  //   return this.http.delete<{
+  //     successful: boolean,
+  //     result: string
+  //   }>(`${this.configUrl}/courses/${id}`);
+  // }
 }

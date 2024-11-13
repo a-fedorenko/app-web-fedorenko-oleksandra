@@ -1,21 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { CourseComponent } from './course.component';
-import { HttpClientModule } from '@angular/common/http';
 import { CoursesRoutingModule } from '../courses/courses-routing.module';
 import { SharedModule } from '../../shared/shared.module';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
 @NgModule({
-  declarations: [
-    CourseComponent
-  ],
   imports: [
-    CommonModule,
-    HttpClientModule,
+    BrowserModule,
     CoursesRoutingModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class CourseModule { }

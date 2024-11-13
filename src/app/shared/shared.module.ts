@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import {
   HeaderComponent,
   ButtonComponent,
-  InfoComponent,
-  ModalComponent,
   SearchComponent,
   CategoryComponent,
   CommentComponent,
@@ -19,13 +17,12 @@ import { StringJoinerPipe } from './pipes/string-joiner.pipe';
 import { EmailValidatorDirective } from './validators/email-validator.directive';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 const COMPONENTS: any[] = [
   HeaderComponent,
   ButtonComponent,
-  InfoComponent,
-  ModalComponent,
   SearchComponent,
   CategoryComponent,
   CommentComponent,
@@ -50,7 +47,8 @@ const PIPES: any[] = [
   imports: [
     CommonModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   exports: [
     ...COMPONENTS,
