@@ -10,7 +10,7 @@
         <li class="links_item"><a href="#contact">Contact</a></li>
       </ul>
     </div>
-    <app-button [iconWrap]="true" [btnClass]="'header_logout'" [buttonText]="'Create Account'" [type]="'button'" [iconName]="arrow" (click)="log()"></app-button>
+    <app-button [iconWrap]="true" [btnClass]="'header_logout'" [buttonText]="isSingIn ? 'Logout' : 'Create Account'" [type]="'button'" [iconName]="arrow" (click)="log()"></app-button>
   </div>
 </div>
 

@@ -1,13 +1,13 @@
 <div class="wrapper">
   <div class="auth_block">
-    <form class="form" [formGroup]="registrationForm" (ngSubmit)="submit()">
+    <form class="auth_form" [formGroup]="registrationForm" (ngSubmit)="submit()">
       <div class="form_content">
-        <span class="form_title">Registration</span>
+        <span class="form_title">Sing Up</span>
         <div class="input_field">
-          <label for="name">Name</label>
           <input class="input"
             id="name"
             type="name"
+            placeholder="Name"
             formControlName="name"
             [class.invalid]="registrationForm.controls['name'].invalid
             && registrationForm.controls['name'].touched"
@@ -18,10 +18,10 @@
           </span>
         </div>
         <div class="input_field">
-          <label for="email">Email</label>
           <input class="input"
             id="email"
             type="email"
+            placeholder="Email"
             formControlName="email"
             [class.invalid]="registrationForm.controls['email'].invalid
             && registrationForm.controls['email'].touched"
@@ -36,10 +36,10 @@
           </span>
         </div>
         <div class="input_field">
-          <label for="password">Password</label>
           <input class="input"
             id="password"
             type="password"
+            placeholder="Password"
             formControlName="password"
             [class.invalid]="registrationForm.controls['password'].invalid
             && registrationForm.controls['password'].touched"
@@ -57,7 +57,7 @@
       <div class="form_submit">
         <app-button
           [btnClass]="'btn_success'"
-          [buttonText]="'Registration'"
+          [buttonText]="'Signup'"
           [type]="'submit'"
           [disabled]="!registrationForm.valid"
         ></app-button>
@@ -66,7 +66,7 @@
         </div>
       </div>
     </form>
-    <img src="" alt="img">
+    <div class="auth_img"></div>
   </div>
 </div>
 

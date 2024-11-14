@@ -1,27 +1,25 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.scss']
 })
-export class RegistrationComponent implements OnInit, OnDestroy {
+export class RegistrationComponent implements OnInit {
 
   registrationForm: FormGroup;
-  sub: Subscription;
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private authService: AuthService
+  ) { }
 
   ngOnInit(): void {
     this.initForm();
-  }
-
-  ngOnDestroy(): void {
-    if(this.sub) {
-      this.sub.unsubscribe();
-    }
   }
 
   private initForm(): void {
@@ -33,9 +31,10 @@ export class RegistrationComponent implements OnInit, OnDestroy {
   }
 
   submit(): void {
-    window.localStorage.setItem('user', JSON.stringify(this.registrationForm.getRawValue()));
+    this.authService.register(this.registrationForm.getRawValue());
     this.registrationForm.disable();
     this.initForm();
+    this.router.navigate(['/']);
   }
 
 }

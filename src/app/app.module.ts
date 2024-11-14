@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { CoursesModule } from './features/courses/courses.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrationModule } from './features/registration/registration.module';
+import { LoginModule } from './features/login/login.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { RegistrationModule } from './features/registration/registration.module'
     CoursesModule,
     FormsModule,
     ReactiveFormsModule,
-    RegistrationModule
+    RegistrationModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]

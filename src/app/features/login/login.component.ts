@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
 
 
 @Component({
@@ -9,17 +10,31 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
+  loginForm: FormGroup;
+
   user = {
     email: '',
     password: ''
   };
 
-  constructor() { }
+  constructor(
+    private authService: AuthService
+  ) { }
 
   ngOnInit(): void {
+    this.initForm();
   }
 
-  submit(form: NgForm) {
-    
+  private initForm(): void {
+    this.loginForm = new FormGroup({
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required, Validators.minLength(6)])
+    });
+  }
+
+  submit() {
+    this.authService.login(this.loginForm.getRawValue());
+    this.loginForm.disable();
+    this.initForm();
   }
 }
