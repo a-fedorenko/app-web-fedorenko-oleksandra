@@ -181,109 +181,109 @@ ul {
     }   
 }
 
-@media screen and (max-width: 480px) {
-    * {
-        margin: 0;
-    }
+// @media screen and (max-width: 480px) {
+//     * {
+//         margin: 0;
+//     }
 
-    .sertion_search {
-        .search_title {
-            margin: 0 !important;
-            padding: 20px;
-        }
+//     .sertion_search {
+//         .search_title {
+//             margin: 0 !important;
+//             padding: 20px;
+//         }
     
-        .search_img {
-            display: none;
-        }
+//         .search_img {
+//             display: none;
+//         }
 
-        .search_desription {
-            margin-right: 0 !important;
-        }
-    }
+//         .search_desription {
+//             margin-right: 0 !important;
+//         }
+//     }
 
-    .sertion_categories {
-        flex-wrap: wrap;
+//     .sertion_categories {
+//         flex-wrap: wrap;
 
-        app-category {
-            margin-bottom: 20px;
-            margin-right: 0;
-            width: 80%;
+//         app-category {
+//             margin-bottom: 20px;
+//             margin-right: 0;
+//             width: 80%;
 
-            .category {
-                display: flex;
-                justify-content: start;
-            }
-        }
-    }
+//             .category {
+//                 display: flex;
+//                 justify-content: start;
+//             }
+//         }
+//     }
 
-    .wrapper {
-        width: 100%;
-        padding: 0;
-    }
+//     .wrapper {
+//         width: 100%;
+//         padding: 0;
+//     }
 
-    .sertion_courses {
-        padding-top: 20px !important;
+//     .sertion_courses {
+//         padding-top: 20px !important;
 
-        app-label {
-            .label {
-                margin: 0 auto;
-            }
-        }
+//         app-label {
+//             .label {
+//                 margin: 0 auto;
+//             }
+//         }
 
-        .course_list {
-            padding: 40px 10px !important;
-            grid-template-columns: repeat(auto-fill, 100%) !important;
-        }
+//         .course_list {
+//             padding: 40px 10px !important;
+//             grid-template-columns: repeat(auto-fill, 100%) !important;
+//         }
     
-        .courses_title {
-            flex-direction: column;
-            padding: 0 10px;
+//         .courses_title {
+//             flex-direction: column;
+//             padding: 0 10px;
     
-            h1 {
-                width: 100% !important;
-            }
-        }
-    }
+//             h1 {
+//                 width: 100% !important;
+//             }
+//         }
+//     }
 
-    .sertion_comments {
-        padding: 0 10px;
+//     .sertion_comments {
+//         padding: 0 10px;
         
-        .comments_title {
-            width: 100%;
+//         .comments_title {
+//             width: 100%;
             
-            h1 {
-                width: 100% !important;
-            }
-        }
+//             h1 {
+//                 width: 100% !important;
+//             }
+//         }
 
-        .sertion_comments-wrapper {
-            flex-direction: column;
+//         .sertion_comments-wrapper {
+//             flex-direction: column;
 
-            app-comment {
-                margin-bottom: 40px !important;
-                margin-right: 0 !important;
-            }
-        }
-    }
+//             app-comment {
+//                 margin-bottom: 40px !important;
+//                 margin-right: 0 !important;
+//             }
+//         }
+//     }
 
-    .sertion_posts {
-        .sertion_posts-wrapper {
-            flex-direction: column;
-            padding: 0 10px;
+//     .sertion_posts {
+//         .sertion_posts-wrapper {
+//             flex-direction: column;
+//             padding: 0 10px;
 
-            app-post {
-                margin-bottom: 20px !important;
-                margin-right: 0 !important;
-            }
-        }
-    }
+//             app-post {
+//                 margin-bottom: 20px !important;
+//                 margin-right: 0 !important;
+//             }
+//         }
+//     }
 
-    .footer {
-        padding: 0 !important;
+//     .footer {
+//         padding: 0 !important;
 
-        .footer_wrapper {
-            flex-direction: column;
-            padding: 0 10px !important;
-        }
-    }
-}
+//         .footer_wrapper {
+//             flex-direction: column;
+//             padding: 0 10px !important;
+//         }
+//     }
+// }
